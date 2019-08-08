@@ -49,7 +49,8 @@ FILEBEAT_PATH_DEFAULT = os.path.join('/', 'opt', 'filebeat')
 
 
 @operation
-def install(filebeat_config_inputs,
+def install(ctx, 
+            filebeat_config_inputs,
             filebeat_config_file='',
             filebeat_install_path='',
             download_url='',
@@ -76,7 +77,7 @@ def install(filebeat_config_inputs,
 
 
 @operation
-def start(**kwargs):
+def start(ctx, **kwargs):
     """Start operation call for filebeat service,
     with filebeat_plugin configuration file.
 
